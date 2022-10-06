@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.js"></script>
+
+    
+    <div class="container" id="resultado">
+
+
+    </div>
+
+    <script>
+
+        window.addEventListener('load', (event) => {
+
+
+            //agregar un nuevo div
+
+            
+            // const newElement = document.createElement("div");
+            // newElement.classList.add("div");
+            // newElement.textContent = "soy un div creado con javascript";
+            // document.querySelector(".container").appendChild(newElement);
+           
+            var valores = ["","1.000","2.000"];
+
+            tabla = "<table border='1'> <tr> <th>#Pagos</<th><th>Valor</th><th>Enviar</th><th>Estado</th></tr>";
+            filas = "";
+
+            for(i = 1; i < 2+1; i++){
+
+                filas+="<tr>";
+                filas+="<td>"+i+"</td>";
+                filas+="<td>"+valores[i]+"</td>";
+                filas+="<td>"+"<button style='background:red;' disabled = true> Pagar </button>"+"</td>";
+                filas+="<td>"+"<label>"+"<i class='far fa-clock'></i>"+"</label>"+"</td>";
+                filas +="</tr>";
+
+            }
+            
+            filas += "</table>";
+            $("#resultado").append(tabla + filas);
+
+        });
+
+    </script>
+
+</body>
+</html>
